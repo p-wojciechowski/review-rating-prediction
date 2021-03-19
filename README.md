@@ -4,7 +4,7 @@ This project uses Keras CNN model to predict rating given along with review base
 
 ### Usage
 
-To get a prediction, you need to send POST request to the `/predict` endpoint. Place json that contain `{"review_text":"<text of review>"}` in request's body. Example with curl:
+To get a prediction, you need to send a POST request to the `/predict` endpoint. Place json that contains `{"review_text":"<text of review>"}` in request's body. Example with curl:
 
 ```bash
 curl \
@@ -14,9 +14,9 @@ curl \
   https://reviews-rating-predictor.herokuapp.com/predict
 ```
 
-> App is hosted on free plan of Heroku, therefore application is switched to sleep mode after 30 minutes of inactivity. It is possible that you will need to wake app instance up, you can do this with GET request sent to `/status` endpoint. After few moments app should be operating.
+> The app is hosted on a free plan of Heroku, therefore application is switched to sleep mode after 30 minutes of inactivity. You may need to wake app instance up, you can do this with a GET request sent to `/status` endpoint. After a few moments app should be operating.
 
-For more specific API documentation, see https://reviews-rating-predictor.herokuapp.com/docs , where you can also send POST requests to get prediction result (in case you don't have tool to send POST requests).
+For more specific API documentation, see https://reviews-rating-predictor.herokuapp.com/docs , where you can also send POST requests to get prediction result (in case you don't have a tool to send POST requests).
 
 ### Content
 
