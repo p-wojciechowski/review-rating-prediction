@@ -1,6 +1,8 @@
-# Review's rating prediction model
+# Hotel review's rating prediction model
 
-This project uses Keras CNN model to predict rating given along with review based on its text. [Trip Advisor Hotel Reviews](https://www.kaggle.com/andrewmvd/trip-advisor-hotel-reviews) dataset was used to train the model. Model uses pre-train word vectors created with [GloVe](https://nlp.stanford.edu/projects/glove/) algorithm to create embedding layer. Final model is deployed on https://reviews-rating-predictor.herokuapp.com/ as REST API with FastAPI.
+This project uses Keras LSTM model to predict rating given along with hotel review based on its text. [Trip Advisor Hotel Reviews](https://www.kaggle.com/andrewmvd/trip-advisor-hotel-reviews) dataset was used to train the model. Model uses pre-train word vectors created with [GloVe](https://nlp.stanford.edu/projects/glove/) algorithm to create embedding layer. Final model is deployed on https://reviews-rating-predictor.herokuapp.com/ as REST API with FastAPI.
+
+Summary of EDA and model selection is here.
 
 ### Usage
 
@@ -22,14 +24,16 @@ For more specific API documentation, see https://reviews-rating-predictor.heroku
 
 * `main.py` - main Python file with FastAPI app
 * `model.py` - Python file with model loading and it's functions
-
 * `notebooks` - folder with Jupyter notebooks with EDA/preprocessing and model selection
 * `cnn_model` - folder with prediction model and preprocessing objects
 * `Procfile` - file with command to run on Heroku
 * `runtime.txt` - file to specify runtime on Heroku
 * `requirements.txt` - requirements suited for deploying on Heroku (do not include libraries required to EDA and training)
+* `requirements_training.txt`- requirements for EDA and model training
 
-### Stack
+### Tools
 
-* `tensorflow==2.4.1` for EDA and training, `tensorflow-cpu==2.4.1` for deploy on Heroku
-* `fastapi==0.63.0`
+* Keras/Tensorflow - building model
+* Keras Tuner - searching hyperparameters
+* FastAPI - API framework
+

@@ -6,9 +6,9 @@ import re
 
 MAXLEN_SEQ=300
 
-model = tf.keras.models.load_model('./cnn_model')
-tokenizer = load(open('./cnn_model/tokenizer.pkl', 'rb'))
-stopwords = load(open('./cnn_model/stopwords.pkl', 'rb'))
+model = tf.keras.models.load_model('./lstm_model')
+tokenizer = load(open('./lstm_model/tokenizer.pkl', 'rb'))
+stopwords = load(open('./lstm_model/stopwords.pkl', 'rb'))
 
 def preprocess(text):
     text = text.lower()
