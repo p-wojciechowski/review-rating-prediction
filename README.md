@@ -27,7 +27,7 @@ For more specific API documentation, see https://reviews-rating-predictor.heroku
 * `main.py` - main Python file with FastAPI app
 * `model.py` - Python file with model loading and it's functions
 * `/notebooks` - folder with Jupyter notebooks with EDA/preprocessing and model selection
-* `/cnn_model` - folder with prediction model and preprocessing objects
+* `/lstm_model` - folder with prediction model and preprocessing objects
 * `Procfile` - file with command to run on Heroku
 * `runtime.txt` - file to specify runtime on Heroku
 * `requirements.txt` - requirements suited for deploying on Heroku (do not include libraries required to EDA and training)
