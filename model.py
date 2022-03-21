@@ -24,11 +24,3 @@ def preprocess(text):
 def predict_rating(text):
     x_vector = preprocess(text)
     return model.predict(x_vector)[0,0]
-
-def soft_preprocess(text):
-    text = text.lower()
-    text = re.sub(r"n't", ' not', text)
-    text = re.sub(r"\W|[\r\n]+", ' ', text) # remove not-words and newlines
-    text = re.sub(r"\s{2,}", ' ', text) # remove '.', ',' and doubled whitespaces
-    tokenized = [word for word in text.split() if word not in stopwords]
-    return tokenized
